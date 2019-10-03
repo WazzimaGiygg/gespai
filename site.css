@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+iframe {
+    border: 0;
+}
+
+.p {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 2em;
+    background-color: #eee;
+    color: #222;
+    text-align: center;
+}
+
+header>* {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #191970;
+}
+
+nav>a {
+    color: #eee;
+    text-decoration: none;
+    padding: 1em;
+}
+
+nav>a:hover {
+    background-color: rgba(255, 255, 255, 50%);
+    transition: all 0.5s;
+}
+
+#conteudo {
+    display: flex;
+}
+
+aside {
+    background-color: #eee;
+    color: #222;
+    min-width: 180px;
+}
+
+aside>h3 {
+    margin: 0;
+    padding: 1em 0.5em 0.5em 1em;
+}
+
+aside>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+aside>ul>li {
+    margin: 0;
+    padding: 0; 
+}
+
+aside>ul>li>a {
+    display: block;
+    color: #222;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+aside>ul>li>a:hover {
+    background-color: rgba(0, 0, 0, .2);
+    transition: all 0.5s;
+}
+
+#conteudo>main {
+    padding: 1em;
+    flex-grow: 1;
+}
+
+a.mais {
+    background-color: #ddd;
+    color: #444;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+a.mais::after {
+    content: " \1F517";
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+#cards>article {
+    max-width: 240px;
+    margin: 16px;
+    padding: 8px;
+    background-color: #eee;
+    box-shadow: 0 0 4px #bbb;
+}
+
+#cards p.mais{
+    margin: 0;
+    text-align: right;
+}
+
+footer {
+    padding: 2em;
+    background-color: #191970;
+    color: #eee;
+    text-align: center;
+}
+
+footer>* {
+    margin: 0;
+}
+
+footer a {
+    color: #eee;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 2px;
+    box-shadow: 0 0 8px #fff;
+    transform: rotate(-10deg);
+    transition: all 0.25s;
+}
+
+footer .social {
+    font-size: 1.5em;
+}
+
+footer .copy {
+    margin: 8px;
+    font-size: .8em;
+    color: #bbb;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav, nav>a, #conteudo, #cards {
+        display: block;
+    }
+    nav>a {
+        border-bottom: 1px solid #555;
+        padding: 0.5em;
+    }
+    aside>ul>li>a {
+        border-bottom: 1px solid #ddd;
+        padding: 0.5em;
+    }
+    #cards>article {
+        max-width: unset;
+    }
+    #cards>article {
+        margin: 16px 0;
+    }
+}
